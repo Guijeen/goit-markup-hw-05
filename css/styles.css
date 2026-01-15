@@ -435,11 +435,15 @@ input {
   background-color: #31d0aa;
 }
 
+.footer-subscribe {
+  margin-left: auto;
+}
+
 .footer-subscribe-email {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
 }
 
 .footer-email {
@@ -498,11 +502,13 @@ input {
   height: 100%;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modale.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .modale-area {
@@ -531,9 +537,12 @@ input {
   width: 24px;
   height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-.modale-close:hover {
+.modale-close:hover,
+.modale-close:focus {
   background-color: #404bbf;
   fill: #fff;
 }
@@ -605,6 +614,7 @@ input {
 }
 
 .modale-chekbox-area {
+  margin-top: 16px;
   margin-bottom: 24px;
 }
 
@@ -628,7 +638,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* cursor: pointer; */
+  cursor: pointer;
   width: 16px;
   height: 16px;
   border-radius: 2px;
